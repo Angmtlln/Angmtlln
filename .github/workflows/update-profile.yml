@@ -1,0 +1,50 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # every day at 06:17 Moscow time
+  workflow_dispatch:         # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - "projects.json"
+      - "scripts/**"
+      - ".github/workflows/update-profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild cards, stats and activity
+        run: python scripts/build_profile.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-light.svg
+            assets/snake-dark.svg?palette=github-dark
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: refresh profile"
+          git push
