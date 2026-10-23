@@ -1,0 +1,58 @@
+{
+  "user": "Angmtlln",
+  "name": "Amir Nigmatullin",
+  "title": "ML Engineer · Computer Vision · Efficient Deep Learning",
+  "tagline": "Making neural networks smaller, faster and still accurate",
+  "merge_languages": { "Jupyter Notebook": "Python" },
+  "hide_languages": ["HTML", "CSS", "Shell", "Dockerfile", "Batchfile"],
+  "projects": [
+    {
+      "id": "vit-kd", "repo": "Angmtlln/ViT_optimization", "category": "compression",
+      "tag": "MODEL COMPRESSION", "title": "ViT Distillation",
+      "lines": ["4 KD strategies on Kvasir-v2 medical images.", "671M teacher → students 8–10× smaller.", "Up from 80.9% without distillation."],
+      "big": "93.5%", "big_label": "student accuracy", "chips": ["PyTorch", "ViT", "Distillation"]
+    },
+    {
+      "id": "vit-skin", "repo": "Angmtlln/Vision-Transformers-for-Histopathology", "category": "compression",
+      "tag": "QUANTIZATION", "title": "Compact Skin-Lesion ViT",
+      "lines": ["Teacher → student distillation on ISIC,", "then INT8 quantization-aware training", "with EMA weights and CPU benchmarks."],
+      "big": "INT8", "big_label": "QAT on CPU", "chips": ["PyTorch", "QAT", "EMA"]
+    },
+    {
+      "id": "efficient-nn", "repo": "Angmtlln/Efficient_NN_course", "category": "research",
+      "tag": "RESEARCH", "title": "Efficient NN Course",
+      "lines": ["Analytical FLOPs, memory, latency & energy", "model calibrated on RTX 4070.", "Reproduced “Data Diet” (NeurIPS 2021)."],
+      "big": "−40%", "big_label": "data, same accuracy", "chips": ["Profiling", "NVML", "ResNet-18"]
+    },
+    {
+      "id": "smiles-zo", "repo": "Angmtlln/SMILES-2026-ZO-Limited-Resnet", "category": "research",
+      "tag": "OPTIMIZATION", "title": "Zero-Order ResNet",
+      "lines": ["SMILES 2026 task with an 8k-sample budget.", "SPSA could not converge, so I solved", "the head in closed form (ridge)."],
+      "big": "61.8%", "big_label": "CIFAR-100, from 1.2%", "chips": ["SPSA", "Ridge", "CIFAR-100"]
+    },
+    {
+      "id": "parquet-gen", "repo": "Zaurall/GAI_floor_coverings", "category": "generative",
+      "tag": "GENERATIVE CV", "title": "AI Parquet Generator",
+      "lines": ["VAE vs GAN vs Stable Diffusion for textures,", "then herringbone layouts placed into", "interiors with perspective and lighting."],
+      "big": "SD 1.5", "big_label": "Img2Img fine-tune", "chips": ["Diffusers", "OpenCV", "VAE/GAN"]
+    },
+    {
+      "id": "scenegen", "repo": "SceneGenAI/scene-gen-ai", "category": "generative",
+      "tag": "GENERATIVE CV", "title": "SceneGen AI",
+      "lines": ["Diffusion backgrounds for furniture", "product photos in e-commerce.", "Full stack from model to web app."],
+      "big": "E2E", "big_label": "ML + API + UI", "chips": ["Diffusers", "FastAPI", "React"]
+    },
+    {
+      "id": "chessmind", "repo": "Zaurall/chessmind-rl", "category": "agents",
+      "tag": "REINFORCEMENT LEARNING", "title": "ChessMind RL",
+      "lines": ["CV reads the board from the screen,", "AlphaZero-style net + MCTS picks a move,", "bot plays on lichess by itself."],
+      "big": "MCTS", "big_label": "AlphaZero-style", "chips": ["RL", "MCTS", "CV"]
+    },
+    {
+      "id": "aleph", "repo": "Angmtlln/xaxaton", "category": "agents",
+      "tag": "LLM AGENTS · HACKATHON", "title": "ALEPH AI Analyst",
+      "lines": ["Chat agent for counterparty due diligence", "with traceable facts, MCP access to", "PostgreSQL and behavioral evals."],
+      "big": "MCP", "big_label": "AI Product Hack", "chips": ["LLM", "MCP", "Postgres"]
+    }
+  ]
+}
