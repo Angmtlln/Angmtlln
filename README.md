@@ -77,11 +77,11 @@ I build and compress neural networks so they run fast without losing accuracy. M
 ### ⚡ Recent activity
 
 <!--ACTIVITY:START-->
-- 🔨 Pushed 1 commit to [Angmtlln/avito-recsys](https://github.com/Angmtlln/avito-recsys) · <sub>6 days ago</sub>
+- 🔨 Pushed 1 commit to [Angmtlln/avito-recsys](https://github.com/Angmtlln/avito-recsys) · <sub>1 wk ago</sub>
 - 🔨 Pushed 1 commit to [Angmtlln/Angmtlln](https://github.com/Angmtlln/Angmtlln) · <sub>2 wk ago</sub>
 - 🔨 Pushed 1 commit to [Angmtlln/Efficient_NN_course](https://github.com/Angmtlln/Efficient_NN_course) · <sub>1 mo ago</sub>
 
-<sub>Auto-updated daily by GitHub Actions · last run 09 Nov 2026</sub>
+<sub>Auto-updated daily by GitHub Actions · last run 10 Nov 2026</sub>
 <!--ACTIVITY:END-->
 
 <p align="center">
